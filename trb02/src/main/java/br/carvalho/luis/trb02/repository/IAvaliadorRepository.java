@@ -1,4 +1,4 @@
-package br.carvalho.luis.trb02.repo;
+package br.carvalho.luis.trb02.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

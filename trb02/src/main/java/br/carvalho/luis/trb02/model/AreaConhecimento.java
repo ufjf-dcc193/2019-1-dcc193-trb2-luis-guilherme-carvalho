@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotBlank;
 
 /**
  * AreaConhecimento
@@ -18,6 +19,8 @@ public class AreaConhecimento {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
+    @NotBlank(message = "É preciso um nome para a área")
     private String nome;
 
     @ManyToMany
