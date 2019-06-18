@@ -11,12 +11,14 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class Revisao {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String descricao;
+
+    private Integer status;
 
     @ManyToOne
     private Trabalho trabalho;
@@ -78,5 +80,19 @@ public class Revisao {
      */
     public void setTrabalho(Trabalho trabalho) {
         this.trabalho = trabalho;
-    }    
+    }
+    
+    /**
+     * @return the status
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 }

@@ -76,9 +76,5 @@ public class Avaliador{
      */
     public void setAreaConhecimentos(List<AreaConhecimento> areaConhecimentos) {
         this.areaConhecimentos = areaConhecimentos;
-    }
-
-
-
-    
+    }    
 }
