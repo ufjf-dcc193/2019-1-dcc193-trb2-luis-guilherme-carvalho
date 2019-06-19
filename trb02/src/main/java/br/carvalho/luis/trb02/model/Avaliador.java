@@ -19,6 +19,8 @@ public class Avaliador{
 
     private String email;
 
+    private String password;
+
     @ManyToMany
     private List<AreaConhecimento> areaConhecimentos;
 
@@ -77,4 +79,18 @@ public class Avaliador{
     public void setAreaConhecimentos(List<AreaConhecimento> areaConhecimentos) {
         this.areaConhecimentos = areaConhecimentos;
     }    
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+    
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

@@ -34,9 +34,10 @@ public class AreaConhecimentoController {
     }
 
     @GetMapping({"/areaConhecimento/create"})
-    public ModelAndView Create(){
+    public ModelAndView Create(AreaConhecimento area){
         ModelAndView mv = new ModelAndView();
         mv.setViewName("area-conhecimento-form");
+        mv.addObject("area", area);
         return mv;
     }
 
@@ -50,7 +51,7 @@ public class AreaConhecimentoController {
             return mv;
         }
         areaRepo.save(area);
-        mv.setViewName("redirect:areaConhecimento");
+        mv.setViewName("redirect:/areaConhecimento");
         return mv;
     }
     

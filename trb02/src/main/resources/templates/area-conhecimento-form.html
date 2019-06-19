@@ -30,7 +30,6 @@
                             <div class="form-group">
                                 <label for="nome">Nome da área</label>
                                 <input type="text" class="form-control" id="nome" placeholder="Nome da área" th:field="*{nome}"/>
-                                <small th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="form-text text-muted text-danger"></small>
                             </div>
                             <button type="submit" class="btn btn-success">Salvar</button>
                             <a href="javascript:history.go(-1)" class="btn btn-secondary">Cancelar</a>

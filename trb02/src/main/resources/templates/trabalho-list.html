@@ -9,17 +9,17 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <meta charset="UTF-8">
-        <title>Lista de Áreas de Conhecimento</title>
+        <title>Lista de Trabalhos</title>
     </head>
     <body>
         <header style="margin-top: 1rem;">
             <div class="container">
                 <div class="row">
                     <div class="col-8">
-                        <h3>Lista de Áreas de Conhecimento</h3>
+                        <h3>Lista de Trabalhos</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="/areaConhecimento/create" class="btn btn-secondary" role="button">Nova Área</a>
+                        <a href="/trabalho/create" class="btn btn-secondary" role="button">Novo Trabalho</a>
                     </div>
                 </div>
             </div>
@@ -32,15 +32,21 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nome</th>
+                                <th>Título</th>
+                                <th>Descrição</th>
+                                <th>URL</th>
+                                <th>Área</th>
                                 <th>Editar</th>
                                 <th>Excluir</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="area: ${areaList}">
-                                <td th:text="${area.id}"></td>
-                                <td th:text="${area.nome}"></td>
+                            <tr th:each="trabalho: ${trabalhoList}">
+                                <td th:text="${trabalho.id}"></td>
+                                <td th:text="${trabalho.titulo}"></td>
+                                <td th:text="${trabalho.descricao}"></td>
+                                <td th:text="${trabalho.arquivoUrl}"></td>
+                                <td th:text="${trabalho.area.nome}"></td>
                                 <td></td>
                                 <td></td>
                             </tr>

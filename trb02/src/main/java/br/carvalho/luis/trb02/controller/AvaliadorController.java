@@ -34,10 +34,11 @@ public class AvaliadorController {
     }
 
     @GetMapping({"/avaliador/create"})
-    public ModelAndView Create(){
+    public ModelAndView Create(Avaliador avaliador){
         ModelAndView mv = new ModelAndView();
         List<AreaConhecimento> areaList = areaRepo.findAll();
         mv.setViewName("avaliador-form");
+        mv.addObject("avaliador", avaliador);
         mv.addObject("areaList", areaList);
         return mv;
     }

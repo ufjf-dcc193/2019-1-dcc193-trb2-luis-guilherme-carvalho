@@ -13,14 +13,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 
         <meta charset="UTF-8">
-        <title>Cadastro de Avaliador</title>
+        <title>Cadastro de Trabalho</title>
     </head>
     <body>
         <header style="margin-top: 1rem;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h3>Cadastro de Avaliador</h3>
+                        <h3>Cadastro de Trabalho</h3>
                     </div>
                 </div>
             </div>
@@ -30,22 +30,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <form th:object="${avaliador}" method="POST">
+                        <form th:object="${trabalho}" method="POST">
                             <div class="form-group">
-                                <label for="nome">Nome do Avaliador</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Nome do Avaliador" th:field="*{nome}" />
+                                <label for="titulo">Titulo do trabalho</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Titulo do trabalho" th:field="*{titulo}" />
                             </div>
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email" th:field="*{email}" />
+                                <label for="descricao">Descrição do trabalho</label>
+                                <input type="text" class="form-control" id="descricao" placeholder="Descrição do trabalho" th:field="*{descricao}" />
                             </div>
                             <div class="form-group">
-                                <label for="password">Senha</label>
-                                <input type="password" class="form-control" id="password" placeholder="password" th:field="*{password}" />
+                                <label for="arquivoUrl">URL do arquivo</label>
+                                <input type="text" class="form-control" id="arquivoUrl" placeholder="URL do arquivo" th:field="*{arquivoUrl}" />
                             </div>
                             <div class="form-group">
                                 <label>Lista de Áreas de Conhecimento</label>
-                                <select class="form-control" id="listaAreas" multiple>
+                                <select class="form-control" id="listaAreas">
                                     <option th:each="area: ${areaList}" th:text="${area.nome}" th:value="${area.id}"></option>
                                 </select>
                             </div>
@@ -61,7 +61,7 @@
             $(document).ready(function ()
             {
                 $("#listaAreas").select2({
-                    placeholder: "Selecione as áreas de conhecimento"
+                    placeholder: "Selecione a área de conhecimento"
                 });
             });
         </script>
